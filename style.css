@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.cabecalho{
+    display: flex;    
+     justify-content: center; 
+    /* border: 1px solid black;  */
+}
+
+.titulo {
+    display: flex; 
+    justify-content: center; 
+    font-size: 2.5rem;
+    font-weight: 600;
+    
+    text-align: center;
+    /* border: 1px solid black;  */
+} 
+
+.tentativas {
+    display: flex; 
+    justify-content: flex-end; 
+    font-size: 3rem;
+    font-weight: 600;
+    padding: 1rem;    
+    /* border: 1px solid black;  */
+}
+
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    /* border: 1px solid black; */
+}
+
+/* .cartas{
+    display: flex;
+    justify-content: space-between; 
+} */
+
+.cartas_linhas{
+    display: flex;
+    justify-content: space-between;     
+    flex-wrap: wrap;
+    /* border: 1px solid black; */
+    margin-bottom: 1rem;
+}
+
+
+.carta{
+    display: flex;
+    justify-content: center; 
+    height: 110px;
+    width: 90px;
+    background-color: yellow;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s all ease;
+    margin: 10px;
+}
+
+.carta:hover{
+    transform: scale(1.1);
+}
+
+.carta img {
+    width: 80%;
+    max-height: 90px;
+    transition: 0.3s all ease;
+    opacity: 0;
+}
+
+.carta.clicada{
+    background-color: orange;
+}
+
+.carta.correta{
+    background-color: lightgreen;
+}
+
+.carta.clicada img,
+.carta.correta img {
+    opacity: 1;
+}
+
+.carta.incorreta{
+    background-color: #f15f5f;
+    animation: shake 0.5s;
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+      }
+      10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+      }
+      20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+      }
+      30% {
+        transform: translate(3px, 2px) rotate(0deg);
+      }
+      40% {
+        transform: translate(1px, -1px) rotate(1deg);
+      }
+      50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+      }
+      60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+      }
+      70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+      }
+      80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+      }
+      90% {
+        transform: translate(1px, 2px) rotate(0deg);
+      }
+      100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+      }
+}
